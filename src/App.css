@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: questrial;
+  scroll-behavior: smooth;
+  --cstm-color-1: rgb(255, 253, 242);
+  --cstm-color-2: rgb(255, 249, 175);
+  --cstm-color-2-border: rgb(167, 181, 175);
+  --cstm-color-3: rgb(10, 35, 35);
+  --cstm-color-4: rgb(76, 91, 92);
+}
+
+.nav-link {
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  font-weight: normal;
+  margin: 13px 12px !important;
+  padding: 10px 30px !important;
+  /* color: var(--cstm-color-3); */
+}
+
+.nav-item:last-of-type > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-item:nth-last-child(2) > * {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  overflow: visible !important;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-toggle::before {
+  content: url("./assets//dropdown.svg");
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  height: 13px;
+  width: 13px;
+  vertical-align: middle;
+  margin-left: auto;
+  transform: rotate(0deg);
+}
+
+.hover-effect {
+  cursor: pointer;
+}
+
+.hover-effect:hover > img {
+  transform: scale(1.15);
+  transition: transform 1.5s ease-in-out;
+}
+
+.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg) !important;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.02);
+  }
+  25% {
+    transform: scale(1.04);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  75% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
